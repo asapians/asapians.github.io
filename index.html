@@ -881,7 +881,29 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/mail-chimp-form.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAq1x54UfuMSMd9vQONTg0NC9ojgt9I_7Q",
+      authDomain: "asapians-8545.firebaseapp.com",
+      projectId: "asapians-8545",
+      storageBucket: "asapians-8545.firebasestorage.app",
+      messagingSenderId: "846803258227",
+      appId: "1:846803258227:web:33e772acf7c0e9d42f5306",
+      measurementId: "G-05P39XZX2Q"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 
 </html>
