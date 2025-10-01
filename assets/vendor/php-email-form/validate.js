@@ -95,9 +95,12 @@
       event.preventDefault();
 
       let thisForm = this;
-
       let action = thisForm.getAttribute('action');
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
+
+      console.log(thisForm);
+      console.log(action);
+      console.log(recaptcha);
 
       if (!action) {
         displayError(thisForm, 'The form action property is not set!');
@@ -137,6 +140,7 @@
     $(thisForm).ajaxChimp({
       url: action,
       callback: function (response) {
+        console.log(response);
         if (response.result === 'success') {
           formSendSuccess(thisForm);
         } else {
