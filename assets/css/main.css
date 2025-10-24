@@ -3789,14 +3789,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
-
-
-/*--------------------------------------------------------------
 # Add a clear visual indicator that the whole area is clickable
 --------------------------------------------------------------*/
 .portfolio-entry.clickable-card:hover {
