@@ -212,4 +212,35 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  // make the while image clickable in work
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all articles with the designated class
+    const clickableCards = document.querySelectorAll('.clickable-card');
+
+    clickableCards.forEach(article => {
+      // Find the specific link element inside the article that should be clicked
+      // You can refine this selector if you have multiple links
+      const targetLink = article.querySelector('a[href]');
+
+      if (targetLink) {
+        // Add a visual cue to the cursor
+        article.style.cursor = 'pointer';
+
+        article.addEventListener('click', function (event) {
+          // Check if the click *wasn't* already on the target link or any interactive element
+          // This prevents double-firing or conflicts with nested buttons/links.
+          if (event.target !== targetLink && !targetLink.contains(event.target)) {
+
+            // Prevent the default action (like navigating or selecting text) when clicking the card area
+            event.preventDefault();
+
+            // 🎯 Programmatically click the actual <a> tag
+            targetLink.click();
+          }
+
+        });
+      }
+    });
+  });
+
 })();
