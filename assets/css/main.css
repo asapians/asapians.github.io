@@ -7,15 +7,18 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #031119;
+  /*--background-color: #031119;*/
+  --background-color: #101012;
   /* Background color for the entire website, including individual sections */
   --default-color: rgba(255, 255, 255, 0.8);
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #e0e9f2;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e3a127;
+  /* --accent-color: #e3a127; */
+  --accent-color: #CC1F49;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1b262c;
+  /* --surface-color: #1b262c; */
+  --surface-color: #101012;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -25,11 +28,12 @@
 :root {
   --nav-color: rgba(255, 255, 255, 0.8);
   /* The default color of the main navmenu links */
-  --nav-hover-color: #e3a127;
+  /* --nav-hover-color: #e3a127; */
+  --nav-hover-color: #CC1F49;
   /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #29343a;
+  --nav-mobile-background-color: #101012;
   /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #29343a;
+  --nav-dropdown-background-color: #101012;
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: rgba(255, 255, 255, 0.8);
   /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -40,8 +44,10 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #0d1d26;
-  --surface-color: #16262f;
+  /* --background-color: #0d1d26; */
+  --background-color: #101012;
+  /* --surface-color: #16262f; */
+  --surface-color: #1f1f23;
 }
 
 .dark-background {
@@ -786,7 +792,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  /*background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);*/
   z-index: 1;
 }
 
@@ -801,6 +807,10 @@ section,
   flex-direction: column;
   justify-content: center;
   padding-right: 3rem;
+}
+
+.mascot{
+  mix-blend-mode:multiply;
 }
 
 @media (max-width: 991px) {
